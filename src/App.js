@@ -1,11 +1,25 @@
 import React, {Component} from 'react';
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
+import Board from './components/Board'
 
 class App extends Component {
   render(){
     return (
-      <div className="App">
-        test
-      </div>
+     <Container>
+       <Row>
+         <Col ></Col>
+         <Col xs={6} className="heading">
+           <h1>Conway's Game of Life</h1>
+         </Col>
+         <Col ></Col>
+       </Row>
+       <Row className="center">
+         <Board />
+       </Row>
+     </Container>
     );
   }
 }

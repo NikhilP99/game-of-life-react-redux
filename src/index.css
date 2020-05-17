@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+td {
+  border: none;
+  height: 1em;
+  width: 1em;
+  background: #D3D3D3;
+}
+
+.alive {
+  background: #808080;
+}
+
+.new-born {
+  background: #778899;
+}
+
+td:hover:not(.alive):not(.new-born){
+  background: #DDD;
+}
