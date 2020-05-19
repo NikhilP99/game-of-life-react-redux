@@ -14,14 +14,12 @@ export default (state = initialBoard, action) => {
         cell.newBorn = !cell.newBorn;
         return board;
       case 'RANDOM_GRID':
-        //true param requests a random grid from makeGrid method
         return makeRandomBoard(totalRows, totalCols);
       case 'CLEAR':
         return cleanBoard(totalRows, totalCols);
       case 'NEXT':
-        return nextGrid(state.slice(0));
+        return nextGrid(state);
       default:
         return state;
     }
   };
-  

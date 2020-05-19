@@ -1,11 +1,24 @@
 import React, {Component} from 'react'
 import {connect} from "react-redux"
 
-import {toggleStatus} from '../actions'
+import {toggleStatus,randomBoard,next} from '../actions'
 
 import Cell from './Cell'
 
 class Board extends Component {
+
+    componentDidMount(){
+      this.getboard()
+        setInterval(()=>{
+            this.props.next()
+        },100)
+    }
+
+    getboard = async () => {
+      await this.props.randomBoard();
+    }
+
+
     render(){
         return(
             <div>
@@ -33,7 +46,9 @@ const mapStateToProps = ({board}) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        toggleStatus: (x,y) => dispatch(toggleStatus(x,y))
+        toggleStatus: (x,y) => dispatch(toggleStatus(x,y)),
+        next: ()=>dispatch(next()),
+        randomBoard: ()=>dispatch(randomBoard())
     }
 }
 

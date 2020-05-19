@@ -20,7 +20,7 @@ export function clearBoard(){
     }
 }
 
-export function nextBoard(){
+export function next(){
     return {
         type: "NEXT"
     }
