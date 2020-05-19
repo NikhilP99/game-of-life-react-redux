@@ -7,13 +7,6 @@ import Cell from './Cell'
 
 class Board extends Component {
 
-    componentDidMount(){
-      this.getboard()
-        setInterval(()=>{
-            this.props.next()
-        },100)
-    }
-
     getboard = async () => {
       await this.props.randomBoard();
     }

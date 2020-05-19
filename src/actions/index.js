@@ -26,9 +26,10 @@ export function next(){
     }
 }
 
-export function play(){
+export function play(timerId){
     return {
-        type: "PLAY"
+        type: "PLAY",
+        timerId
     }
 }
 
