@@ -25,3 +25,15 @@ export function next(){
         type: "NEXT"
     }
 }
+
+export function play(){
+    return {
+        type: "PLAY"
+    }
+}
+
+export function pause(){
+    return {
+        type: "PAUSE"
+    }
+}
